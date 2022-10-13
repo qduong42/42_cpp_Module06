@@ -4,7 +4,7 @@
 #include "Base.hpp"
 #include <stdlib.h>
 #include <iostream>
-#include <typeinfo>
+// #include <typeinfo>
 
 Base* generate(void)
 {
@@ -45,7 +45,8 @@ void identify(Base* p)
 
 /*
     catch bad_cast or std::exception => both work on mac
-    on linux: need <typeinfo>
+    on linux: need <typeinfo> if catching bad_cast
+    since header not allowed: catching exception instead
     error: catching polymorphic type 'class std::bad_cast' by value
     => change to catch by ref
 */
@@ -55,18 +56,18 @@ void identify(Base& p)
         (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
     }
-    catch(std::bad_cast const&){
+    catch(std::exception const&){
     }
     try{
         (void)dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
     }
-    catch(std::bad_cast const&){}
+    catch(std::exception const&){}
     try{
         (void)dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
     }
-    catch(std::bad_cast const&){}
+    catch(std::exception const&){}
 }
 
 int main()
