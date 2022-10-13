@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: qduong <qduong@students.42wolfsburg.de>    +#+  +:+       +#+         #
+#    By: qduong <qduong@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/17 17:27:44 by qduong            #+#    #+#              #
-#    Updated: 2022/10/11 11:48:41 by qduong           ###   ########.fr        #
+#    Updated: 2022/10/13 20:24:46 by qduong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ clean:
 	$(RM) *.dSYM
 
 fclean:clean
-	$(RM) $(NAME) test wrong main debug.bi
+	$(RM) $(NAME) test wrong main debug.bi *.bi
 
 re:	fclean all
 
