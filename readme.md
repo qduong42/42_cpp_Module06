@@ -2,6 +2,8 @@
 
 ## About
 
+CPP06 introduced me to static, reinterpret cast and dyamic cast concepts in CPP. It was insightful to compare these to C-Style casts. They offer some protection in case you cast improperly.
+
 ## Installation & Usage
 
 ### Requirements
